@@ -48,7 +48,8 @@ wieloplatformowo¶ci.
 %patch0 -p1
 
 %build
-aclocal
+rm -f missing
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -56,27 +57,25 @@ aclocal
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
 
-install -d $RPM_BUILD_ROOT/%{_bindir}
-install -d $RPM_BUILD_ROOT/%{_datadir}/%{name}
+cp src/dexterquad 	$RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp src/dexterquad 	$RPM_BUILD_ROOT/%{_datadir}/%{name}
+cp -r src/Comunes	$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/Enemigos	$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/Estructuras	$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/Forms		$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/Idioma	$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/Mapas		$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/Menu		$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/Naves		$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/fonts		$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/pilotos	$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/sound		$RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -r src/video		$RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -r src/Comunes	$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/Enemigos	$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/Estructuras	$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/Forms		$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/Idioma	$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/Mapas		$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/Menu		$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/Naves		$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/fonts		$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/pilotos	$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/sound		$RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp -r src/video		$RPM_BUILD_ROOT/%{_datadir}/%{name}
-
-cp %{SOURCE1}		$RPM_BUILD_ROOT/%{_datadir}/%{name}/video
-cp %{SOURCE2}		$RPM_BUILD_ROOT/%{_datadir}/%{name}/sound/music
+cp %{SOURCE1}		$RPM_BUILD_ROOT%{_datadir}/%{name}/video
+cp %{SOURCE2}		$RPM_BUILD_ROOT%{_datadir}/%{name}/sound/music
 
 cat > $RPM_BUILD_ROOT/%{_bindir}/dexterquad <<EOF
 #!/bin/sh
@@ -89,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README TODO
+%doc ChangeLog README TODO
 
 %attr(755,root,root) %{_bindir}/dexterquad
 %dir %{_datadir}/%{name}
