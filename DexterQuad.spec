@@ -11,8 +11,11 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/%{name}-%{version}.tar.gz
+# Source0-md5:	5f4538fedf809548438cab8da93b5c4a
 Source1:	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/intro.mpg
+# Source1-md5:	d3663578b758a98e820cd01fe1ac16f0
 Source2:	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/level01.mp3
+# Source2-md5:	620ed4acc64b1ca29ece264a6749b9f5
 Patch0:		%{name}-make.patch
 URL:		http://gazer.daemonbsd.com.ar/juegos/dexterquad/
 BuildRequires:	OpenGL-devel
