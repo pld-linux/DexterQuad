@@ -3,16 +3,16 @@
 #TODO2: dexterquad should search its files from %{_bindir} in %{_datadir}/%{name}
 #TODO3:	dexterquad have some font problems :(
 
-Summary: 	Dexter Quad - 2D top-down scrolling game
+Summary:	Dexter Quad - 2D top-down scrolling game
 Summary(pl):	Dexter Quad - gra z pionowo przewijanym ekranem 2D
 Name:		DexterQuad
 Version:	0.1.6
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
-Source0: 	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/%{name}-%{version}.tar.gz
-Source1: 	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/intro.mpg
-Source2: 	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/level01.mp3
+Source0:	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/%{name}-%{version}.tar.gz
+Source1:	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/intro.mpg
+Source2:	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/level01.mp3
 Patch0:		%{name}-make.patch
 URL:		http://gazer.daemonbsd.com.ar/juegos/dexterquad/
 BuildRequires:	OpenGL-devel
