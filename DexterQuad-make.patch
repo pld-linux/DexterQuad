@@ -1,0 +1,12 @@
+diff -Nur DexterQuad-0.1.6.orig/src/Makefile.am DexterQuad-0.1.6.chng/src/Makefile.am
+--- DexterQuad-0.1.6.orig/src/Makefile.am	Tue Jun  4 08:37:37 2002
++++ DexterQuad-0.1.6.chng/src/Makefile.am	Tue Sep 10 19:07:50 2002
+@@ -9,7 +9,7 @@
+ CXXFLAGS =\
+ 	-DLINUX\
+ 	 -Wall -Wimplicit -Wreturn-type -Wunused -Wcomment -Wuninitialized -Wparentheses -Wtraditional -Wpointer-arith -Wmissing-prototypes\
+-	 -g
++	 -g @SDL_CFLAGS@
+ 
+ bin_PROGRAMS = dexterquad
+ 
