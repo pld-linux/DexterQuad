@@ -35,7 +35,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
-
 %description
 DexterQuad is a 2D top-down scrolling game written in C++, using the
 SDL library for cross-platform programming.
@@ -62,7 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
 
 cp src/dexterquad 	$RPM_BUILD_ROOT%{_datadir}/%{name}
-
 cp -r src/Comunes	$RPM_BUILD_ROOT%{_datadir}/%{name}
 cp -r src/Enemigos	$RPM_BUILD_ROOT%{_datadir}/%{name}
 cp -r src/Estructuras	$RPM_BUILD_ROOT%{_datadir}/%{name}
@@ -79,7 +77,7 @@ cp -r src/video		$RPM_BUILD_ROOT%{_datadir}/%{name}
 cp %{SOURCE1}		$RPM_BUILD_ROOT%{_datadir}/%{name}/video
 cp %{SOURCE2}		$RPM_BUILD_ROOT%{_datadir}/%{name}/sound/music
 
-cat > $RPM_BUILD_ROOT/%{_bindir}/dexterquad <<EOF
+cat > $RPM_BUILD_ROOT%{_bindir}/dexterquad <<EOF
 #!/bin/sh
 cd %{_datadir}/%{name}
 ./dexterquad \$@
@@ -91,7 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO
-
 %attr(755,root,root) %{_bindir}/dexterquad
 %dir %{_datadir}/%{name}
 # isn't it arch-dependent library??? if so - it cannot be in %{_datadir}!!!
