@@ -10,11 +10,11 @@ Version:	0.1.6
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
-Source0: 	http://gazer.daemonbsd.com.ar/files/dexter/%{name}-%{version}.tar.gz
-Source1: 	http://gazer.daemonbsd.com.ar/files/dexter/intro.mpg
-Source2: 	http://gazer.daemonbsd.com.ar/files/dexter/level01.mp3
+Source0: 	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/%{name}-%{version}.tar.gz
+Source1: 	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/intro.mpg
+Source2: 	http://gazer.daemonbsd.com.ar/juegos/dexterquad/files/level01.mp3
 Patch0:		%{name}-make.patch
-URL:		http://gazer.daemonbsd.com.ar/dexter.shtml
+URL:		http://gazer.daemonbsd.com.ar/juegos/dexterquad/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_ttf-devel
