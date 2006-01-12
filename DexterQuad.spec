@@ -1,7 +1,7 @@
-
-#TODO: make install should copy all game files not only docs and binaries
-#TODO2: dexterquad should search its files from %{_bindir} in %{_datadir}/%{name}
-#TODO3:	dexterquad have some font problems :(
+# TODO: 
+# - make install should copy all game files not only docs and binaries
+# - dexterquad should search its files from %{_bindir} in %{_datadir}/%{name}
+# - dexterquad have some font problems :(
 
 Summary:	Dexter Quad - 2D top-down scrolling game
 Summary(pl):	Dexter Quad - gra z pionowo przewijanym ekranem 2D
@@ -93,42 +93,24 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 # isn't it arch-dependent library??? if so - it cannot be in %{_datadir}!!!
 %attr(755,root,root) %{_datadir}/%{name}/dexterquad
-# can't the following be simplified?
-%dir %{_datadir}/%{name}/Comunes
-%{_datadir}/%{name}/Comunes/*
-%dir %{_datadir}/%{name}/Enemigos
-%{_datadir}/%{name}/Enemigos/*
-%dir %{_datadir}/%{name}/Forms
-%{_datadir}/%{name}/Forms/*
-%dir %{_datadir}/%{name}/Idioma
-%{_datadir}/%{name}/Idioma/*
-%dir %{_datadir}/%{name}/Menu
-%{_datadir}/%{name}/Menu/*
-%dir %{_datadir}/%{name}/fonts
-%{_datadir}/%{name}/fonts/*
-%dir %{_datadir}/%{name}/pilotos
-%{_datadir}/%{name}/pilotos/*
-%dir %{_datadir}/%{name}/video
-%{_datadir}/%{name}/video/*
+%{_datadir}/%{name}/Comunes
+%{_datadir}/%{name}/Enemigos
+%{_datadir}/%{name}/Forms
+%{_datadir}/%{name}/Idioma
+%{_datadir}/%{name}/Menu
+%{_datadir}/%{name}/fonts
+%{_datadir}/%{name}/pilotos
+%{_datadir}/%{name}/video
 %dir %{_datadir}/%{name}/Estructuras
-%dir %{_datadir}/%{name}/Estructuras/STorreta
-%{_datadir}/%{name}/Estructuras/STorreta/*
-%dir %{_datadir}/%{name}/Estructuras/Torreta
-%{_datadir}/%{name}/Estructuras/Torreta/*
+%{_datadir}/%{name}/Estructuras/STorreta
+%{_datadir}/%{name}/Estructuras/Torreta
 %dir %{_datadir}/%{name}/Mapas
-%dir %{_datadir}/%{name}/Mapas/Nivel01
-%{_datadir}/%{name}/Mapas/Nivel01/*
+%{_datadir}/%{name}/Mapas/Nivel01
 %dir %{_datadir}/%{name}/Naves
-%dir %{_datadir}/%{name}/Naves/Caza
-%{_datadir}/%{name}/Naves/Caza/*
-%dir %{_datadir}/%{name}/Naves/Ferny
-%{_datadir}/%{name}/Naves/Ferny/*
-%dir %{_datadir}/%{name}/Naves/Jorge
-%{_datadir}/%{name}/Naves/Jorge/*
-%dir %{_datadir}/%{name}/Naves/Sagar
-%{_datadir}/%{name}/Naves/Sagar/*
+%{_datadir}/%{name}/Naves/Caza
+%{_datadir}/%{name}/Naves/Ferny
+%{_datadir}/%{name}/Naves/Jorge
+%{_datadir}/%{name}/Naves/Sagar
 %dir %{_datadir}/%{name}/sound
-%dir %{_datadir}/%{name}/sound/efectos
-%{_datadir}/%{name}/sound/efectos/*
-%dir %{_datadir}/%{name}/sound/music
-%{_datadir}/%{name}/sound/music/*
+%{_datadir}/%{name}/sound/efectos
+%{_datadir}/%{name}/sound/music
