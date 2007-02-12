@@ -4,7 +4,7 @@
 # - dexterquad have some font problems :(
 
 Summary:	Dexter Quad - 2D top-down scrolling game
-Summary(pl):	Dexter Quad - gra z pionowo przewijanym ekranem 2D
+Summary(pl.UTF-8):   Dexter Quad - gra z pionowo przewijanym ekranem 2D
 Name:		DexterQuad
 Version:	0.1.6
 Release:	0.1
@@ -39,10 +39,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 DexterQuad is a 2D top-down scrolling game written in C++, using the
 SDL library for cross-platform programming.
 
-%description -l pl
+%description -l pl.UTF-8
 DexterQuad to dwuwymiarowa gra z pionowym przewijaniem ekranu,
-napisana w C++ przy uøyciu biblioteki SDL w celu zapewnienia
-wieloplatformowo∂ci.
+napisana w C++ przy u≈ºyciu biblioteki SDL w celu zapewnienia
+wieloplatformowo≈õci.
 
 %prep
 %setup -q
