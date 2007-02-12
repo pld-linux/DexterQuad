@@ -4,7 +4,7 @@
 # - dexterquad have some font problems :(
 
 Summary:	Dexter Quad - 2D top-down scrolling game
-Summary(pl.UTF-8):   Dexter Quad - gra z pionowo przewijanym ekranem 2D
+Summary(pl.UTF-8):	Dexter Quad - gra z pionowo przewijanym ekranem 2D
 Name:		DexterQuad
 Version:	0.1.6
 Release:	0.1
